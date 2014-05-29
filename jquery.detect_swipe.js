@@ -10,7 +10,7 @@
     version: '2.1.1',
     enabled: 'ontouchstart' in document.documentElement,
     preventDefault: true,
-    threshold: 20
+    threshold: window.devicePixelRatio >= 2 ? 10 : 20,
   };
 
   var startX,

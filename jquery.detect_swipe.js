@@ -20,6 +20,7 @@
   function onTouchEnd() {
     this.removeEventListener('touchmove', onTouchMove);
     this.removeEventListener('touchend', onTouchEnd);
+    this.removeEventListener('touchcancel', onTouchEnd);
     isMoving = false;
   }
 
@@ -51,6 +52,7 @@
       isMoving = true;
       this.addEventListener('touchmove', onTouchMove, false);
       this.addEventListener('touchend', onTouchEnd, false);
+      this.addEventListener('touchcancel', onTouchEnd, false);
     }
   }
 
